@@ -8,7 +8,7 @@
 
  
 
-    <label for="artista">Artista/Banda:</label> 
+    <label for="artista">Artísta/Banda:</label> 
 
     <input type="text" name="artista" required> 
 
