@@ -1,6 +1,12 @@
+
+<?php
+require('controllers/MusicasController.php');
+
+?>
+
 <h1>Cadastrar Nova Música</h1> 
 
-<form action="store.php" method="POST"> 
+<form action="controllers/MusicasController.php" method="GET"> 
 
     <label for="titulo">Título:</label> 
 
