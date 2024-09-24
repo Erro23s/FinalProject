@@ -1,53 +1,33 @@
-<h1>Lista de Músicas</h1> 
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulário de Usuário</title>
+    <style>
+  div{ 
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}
 
-<a href="create.php">Cadastrar Nova Música</a> 
+    </style>
+</head>
+<body>
+    <div>
+        <h1>Login</h1>
+        <form method="POST" action="../index.php?action=create">
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
- 
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
 
-<table> 
+        <button type="submit">Cadastrar</button>
+        </form>
+    </div>
+    
 
-    <thead> 
-
-        <tr> 
-
-            <th>Título</th> 
-
-            <th>Artista/Banda</th> 
-
-            <th>Gênero</th> 
-
-            <th>Avaliação Média</th> 
-
-            <th>Ações</th> 
-
-        </tr> 
-
-    </thead> 
-
-    <tbody> 
-
-        <?php foreach ($musicas as $musica): ?> 
-
-        <tr> 
-
-            <td><?= htmlspecialchars($musica['titulo']) ?></td> 
-
-            <td><?= htmlspecialchars($musica['artista']) ?></td> 
-
-            <td><?= htmlspecialchars($musica['genero']) ?></td> 
-
-            <td><?= htmlspecialchars($musica['media_avaliacao']) ?></td> 
-
-            <td> 
-
-                <a href="show.php?id=<?= $musica['id'] ?>">Ver Detalhes</a> 
-
-            </td> 
-
-        </tr> 
-
-        <?php endforeach; ?> 
-
-    </tbody> 
-
-</table> 
+    
+</body>
+</html>

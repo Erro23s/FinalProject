@@ -1,28 +1,34 @@
-
 <?php
+require_once __DIR__ . "../../Models/MusicaModel.php";
+require_once __DIR__ . "../../core/Database.php";
 
-require("config.php");
+class MusicaController {
+    private $musicamodel;
 
-
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $titulo = $_POST['Titulo'];
-    $author = $_POST['autor_id'];
-    $genre = $_POST['genero_id'];
-    $date = $_POST['data1'];
-    
-    
-    $stmt = $conn->prepare("INSERT INTO users (name, email, Genero, data) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $titulo, $author, $genre, $date);
-
-    if ($stmt->execute()) {
-        header('Location: registrarcopia.php');
-        
-    } else {
-        echo "Erro: " . $stmt->error;
+    public function __construct() {
+        $db = new Database();
+        $this->musicamodel = new MusicaModel($db->getConnection());
     }
-    
-    $stmt->close();
-    $conn->close();
+
+    public function CriarMusica() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $titulo = $_POST['titulo'];
+            $artista = $_POST['artista'];
+            $genero = $_POST['genero'];
+            $url_musica = $_POST['url_musica'];
+            
+            
+
+            if ($this->musicamodel->inserirMusica($titulo, $artista, $genero, $url_musica)) {
+                header("location: ../index.php?action=cadastrar");
+        
+            } else {
+                echo "Erro ao inserir o usuário!";
+            }
+        }
+    }
+
+    public function ListarMusicas() {
+        return $this->musicamodel->BuscarMusica();
+    }
 }
-?>
