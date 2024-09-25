@@ -1,6 +1,6 @@
 <?php
-require_once __DIR__ . './../controllers/UserController.php';
-require_once __DIR__ . './../controllers/MusicasController.php';
+require_once __DIR__ . '../../controllers/UserController.php';
+require_once __DIR__ . '../../controllers/MusicasController.php';
 $controller = new UserController();
 $controllermusica = new MusicaController();
 
@@ -13,9 +13,10 @@ if (isset($_GET['action'])) {
         $users = $controller->listUsers();
         include __DIR__ . '../../Views/musicas/create.php';
     }
-      elseif(isset($_GET['action']) == 'cadastrar'){
+      elseif ($_GET['action'] == 'cadastro'){
         $controllermusica->CriarMusica();
-    } elseif($_GET['action'] == 'list') {
+
+    } elseif($_GET['action'] == 'listarmusicas') {
         
         $listarmusica=$controllermusica->ListarMusicas();
         include __DIR__ . '../../Views/musicas/listarMusica.php';
