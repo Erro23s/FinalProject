@@ -15,7 +15,7 @@ transform: translate(-50%, -50%);
 </head>
 <body>
     <div>
-        <h1>Login</h1>
+        <h1>Cadastrar</h1>
         <form method="POST" action="../index.php?action=create">
         <label for="name">Nome:</label>
         <input type="text" id="name" name="name" required><br><br>
@@ -25,6 +25,9 @@ transform: translate(-50%, -50%);
 
         <button type="submit">Cadastrar</button>
         </form>
+
+        <label for="a">Já tem conta?</label>
+        <a href="login?action=login">Clique aqui</a>
     </div>
     
 

@@ -21,7 +21,12 @@ if (isset($_GET['action'])) {
         $listarmusica=$controllermusica->ListarMusicas();
         include __DIR__ . '../../Views/musicas/listarMusica.php';
 
+    }elseif($_GET['action'] == 'cadrastro') {
+        include __DIR__ .  '../../Views/musicas/cadastro.php';
+    }elseif($_GET['action'] == 'login') {
+         include __DIR__ . '../../Views/musicas/login.php';
+
     }
 } else {
-    include __DIR__ . '../../Views/musicas/index.php';
+    include __DIR__ . '../../Views/musicas/cadastro.php';
 }
