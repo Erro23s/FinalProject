@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+<link rel="stylesheet" type="text/css" href="../../public/Css/Cadastro.css" media="screen" />
     <meta charset="UTF-8">
     <title>Formulário de Usuário</title>
     <style>
-  div{ 
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
     </style>
 </head>
 <body>
@@ -23,7 +17,7 @@ transform: translate(-50%, -50%);
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
-        <button type="submit">Cadastrar</button>
+        <button type="submit">Login</button>
         </form>
 
         <label for="a">Não tem conta?</label>

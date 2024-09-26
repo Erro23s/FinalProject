@@ -1,16 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+<link rel="stylesheet" type="text/css" href="../../public/Css/Cadastro.css" media="screen" />
     <meta charset="UTF-8">
     <title>Formulário de Usuário</title>
     <style>
-  div{ 
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-}
-
     </style>
 </head>
 <body>
