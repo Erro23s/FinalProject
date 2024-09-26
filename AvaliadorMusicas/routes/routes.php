@@ -1,8 +1,11 @@
 <?php
-require_once __DIR__ . '../../controllers/UserController.php';
+require_once __DIR__ . '../../controllers/CadastroController.php';
 require_once __DIR__ . '../../controllers/MusicasController.php';
+require_once __DIR__ . '../../controllers/LoginController.php';
+
 $controller = new UserController();
 $controllermusica = new MusicaController();
+$validarcontroller = new ValidarController();
 
 
 if (isset($_GET['action'])) {
@@ -26,6 +29,11 @@ if (isset($_GET['action'])) {
     }elseif($_GET['action'] == 'login') {
          include __DIR__ . '../../Views/musicas/login.php';
 
+    }elseif (($_GET['action'] == 'validar')){
+       $users = $validarcontroller-> ValidarUsuario();
+       
+    }elseif ($_GET['action'] == 'validou') {
+        include __DIR__ . '../../Views/musicas/crate.php';
     }
 } else {
     include __DIR__ . '../../Views/musicas/cadastro.php';
