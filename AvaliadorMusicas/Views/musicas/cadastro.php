@@ -8,6 +8,10 @@
     </style>
 </head>
 <body>
+    <div class="background-overlay"></div> <!-- Fundo adicional atrás do formulário -->
+    
+    <div class="login-container">
+        <div class="login-box">
     <div>
         <h1>Cadastrar</h1>
         <form method="POST" action="../index.php?action=create">
@@ -19,6 +23,7 @@
 
         <button type="submit">Cadastrar</button>
         </form>
+        <br> 
 
         <label for="a">Já tem conta?</label>
         <a href="login?action=login">Clique aqui</a>

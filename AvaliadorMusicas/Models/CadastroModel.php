@@ -14,7 +14,7 @@ class UserModel {
     }
 
     public function buscarUsers() {
-        $query = "SELECT * FROM users";
+        $query = "SELECT * FROM users ";
         $result = $this->conn->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
