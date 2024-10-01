@@ -12,17 +12,12 @@ if (isset($_GET['action'])) {
     if ($_GET['action'] == 'create') {
         $controller->createUser();
 
-    } elseif ($_GET['action'] == 'list') {
-        $users = $controller->listUsers();
-        include __DIR__ . '../../Views/musicas/create.php';
+    } elseif ($_GET['action'] == 'validou') {
+        $listarmusica = $controllermusica->ListarMusicas();
+        include __DIR__ . '../../Views/musicas/listarMusica.php';
     }
       elseif ($_GET['action'] == 'cadastro'){
         $controllermusica->CriarMusica();
-
-    } elseif($_GET['action'] == 'listarmusicas') {
-        
-        $listarmusica=$controllermusica->ListarMusicas();
-        include __DIR__ . '../../Views/musicas/listarMusica.php';
 
     }elseif($_GET['action'] == 'cadrastro') {
         include __DIR__ .  '../../Views/musicas/cadastro.php';
@@ -30,11 +25,11 @@ if (isset($_GET['action'])) {
          include __DIR__ . '../../Views/musicas/login.php';
 
     }elseif (($_GET['action'] == 'validar')){
-       $users = $validarcontroller-> ValidarUsuario();
-       
-    }elseif ($_GET['action'] == 'validou') {
-        include __DIR__ . '../../Views/musicas/crate.php';
-    }
-} else {
+       $users = $validarcontroller-> ValidarUsuario();  
+    }elseif($_GET['action'] == 'admin') {
+        $listarmusica = $controllermusica->ListarMusicas();
+        $users = $controller->listUsers();
+        include __DIR__ . '../../Views/musicas/create.php';
+    }}   else {
     include __DIR__ . '../../Views/musicas/cadastro.php';
-}
+     }

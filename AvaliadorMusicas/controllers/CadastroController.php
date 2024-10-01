@@ -16,7 +16,7 @@ class UserController {
             $email = $_POST['email'];
 
             if ($this->userModel->inserirUser($name, $email)) {
-                header("location: ../index.php?action=list");
+                header("location: ../index.php?action=login");
         
             } else {
                 echo "Erro ao inserir o usuário!";
