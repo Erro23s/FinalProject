@@ -22,7 +22,11 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
+
+        <button type="submit">Fazer Login</button>
+
         <button type="submit">Login</button>
+
         </form>
         <br>
 

@@ -20,7 +20,7 @@ class MusicaController {
             
 
             if ($this->musicamodel->inserirMusica($titulo, $artista, $genero, $url_musica)) {
-                header("location: ../index.php?action=listarmusicas");
+                header("location: ../index.php?action=admin");
         
             } else {
                 echo "Erro ao inserir o usuário!";
