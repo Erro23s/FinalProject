@@ -12,8 +12,8 @@
 <div class="background-overlay"></div> <!-- Fundo adicional atrás do formulário -->
     
     <div class="login-container">
-        <div class="login-box">
-    <div>
+        
+    <div class="border">
         <h1>Login</h1>
         <form method="POST" action="../index.php?action=validar">
         <label for="name">Nome:</label>
@@ -31,7 +31,7 @@
         <br>
 
         <label for="a">Não tem conta?</label>
-        <a href="login?action=cadrastro">Clique aqui</a>
+        <a class="link"href="login?action=cadrastro">Clique aqui</a>
     </div>
     
 
