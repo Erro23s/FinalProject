@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Impact', fantasy;
+}
+
+.input-box {
+    margin-bottom: 20px;
+}
+
+input {
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.2);
+    color: rgb(12, 12, 12);
+}
+
+    button{
+    background: linear-gradient(to right,#196BCA ,#6433E0);
+    background-color: #196BCA;
+    color: #fff;
+    font-family: Verdana;
+    font-size: 13px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    padding: 4px 15px;
+    border: 3px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+    cursor:pointer;
+   }
+   button:hover{
+    background: linear-gradient(to right,#5482d0 ,#7d5ee3);
+    background-color: #5482d0;
+   }
+   button:active{
+    transform: scale(0.95);
+   }

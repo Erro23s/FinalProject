@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+<link rel="stylesheet" type="text/css" href="../../public/Css/Cadastro.css" media="screen" />
     <meta charset="UTF-8">
     <title>Formulário de Usuário</title>
     <style>
-/* Estilos Gerais */
-
     </style>
 </head>
 <body>

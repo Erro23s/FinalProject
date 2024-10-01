@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
+<link rel="stylesheet" type="text/css" href="../../public/Css/Cadastro.css" media="screen" />
     <meta charset="UTF-8">
     <title>Formulário de Usuário</title>
     <style>
@@ -21,7 +22,11 @@
         <label for="email">Email:</label>
         <input type="email" id="email" name="email" required><br><br>
 
+
         <button type="submit">Fazer Login</button>
+
+        <button type="submit">Login</button>
+
         </form>
         <br>
 
