@@ -5,55 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Música</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-            color: #333;
-        }
-
-        h1 {
-            text-align: center;
-            color: #4CAF50;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        th, td {
-            padding: 12px;
-            text-align: left;
-            border: 1px solid #ddd;
-        }
-
-        th {
-            background-color: #4CAF50;
-            color: white;
-        }
-
-        tr:hover {
-            background-color: #f1f1f1;
-        }
-
-        a {
-            text-decoration: none;
-            color: #4CAF50;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .no-music {
-            text-align: center;
-            font-style: italic;
-            color: #888;
-        }
+        
     </style>
 </head>
 <body>
@@ -67,7 +19,7 @@
             <th>Artista</th>
             <th>Gênero</th>
             <th>URL</th>
-            <th>Ações</th>
+            <th>Avaliações</th>
         </tr>
     </thead>
     <tbody>

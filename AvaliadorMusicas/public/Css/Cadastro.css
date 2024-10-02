@@ -106,6 +106,18 @@ input:focus {
 
 button {
     cursor:pointer;
+    width: 150px;
+    height: 35px;
+    border-style: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+button:hover {
+    transform: scale(1.05);
+    background-color: #08970f;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Cor ao passar o cursor */
 }
 
 .login-button {
