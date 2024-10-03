@@ -23,14 +23,14 @@
         <input type="email" id="email" name="email" required><br><br>
 
 
-        <button type="submit">Fazer Login</button>
-
         <button type="submit">Login</button>
 
         </form>
         <br>
 
         <label for="a">Não tem conta?</label>
+        
+
         <a class="link"href="login?action=cadrastro">Clique aqui</a>
     </div>
     

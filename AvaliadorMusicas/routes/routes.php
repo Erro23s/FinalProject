@@ -30,6 +30,10 @@ if (isset($_GET['action'])) {
         $listarmusica = $controllermusica->ListarMusicas();
         $users = $controller->listUsers();
         include __DIR__ . '../../Views/musicas/create.php';
-    }}   else {
+    }elseif($_GET['action'] == 'avaliar') {
+        $controllermusica -> avaliarMusica();
+        $listarmusica = $controllermusica->ListarMusicas();
+        include __DIR__ . '../../Views/musicas/listarMusica.php';
+}}   else {
     include __DIR__ . '../../Views/musicas/cadastro.php';
      }
