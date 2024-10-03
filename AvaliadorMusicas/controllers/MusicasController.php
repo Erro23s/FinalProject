@@ -31,4 +31,14 @@ class MusicaController {
     public function ListarMusicas() {
         return $this->musicamodel->BuscarMusica();
     }
-}
+    
+    
+    public function avaliarMusica() {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['musica_id'], $_POST['avaliacao'])) {
+            $musicaId = (int) $_POST['musica_id'];
+            $avaliacao = (int) $_POST['avaliacao'];
+
+            if ($avaliacao >= 1 && $avaliacao <= 5) {
+                $this->musicamodel->adicionarAvaliacao($musicaId, $avaliacao);
+            }
+}}}
