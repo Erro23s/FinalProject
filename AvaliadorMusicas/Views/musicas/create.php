@@ -1,13 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrar Nova Música</title>
-    <style>
-       
-    </style>
 </head>
 <body>
 
@@ -21,25 +17,24 @@
 <form action="../index.php?action=cadastro" method="POST">
     <label for="titulo">Título:</label>
     <input type="text" name="titulo" required>
- 
+
     <br />
-    
+
     <label for="artista">Artísta/Banda:</label>
- 
+
     <input type="text" name="artista" required>
-    
+
     <br />
-    
- 
+
 
     <label for="genero">Gênero:</label>
     <input type="text" name="genero">
 
 
     <br />
-   
- 
- 
+
+
+
     <label for="url_musica">URL da Música (YouTube, Spotify, etc.):</label>
     <input type="url" name="url_musica" required>
 
@@ -52,7 +47,7 @@
             <th>Título</th>
             <th>Artista</th>
             <th>Gênero</th>
-            <th>URL</th>
+            <th>Música</th>
             <th>Avaliações</th>
         </tr>
     </thead>
@@ -63,11 +58,15 @@
                     <td><?= htmlspecialchars($musica['titulo']) ?></td>
                     <td><?= htmlspecialchars($musica['artista']) ?></td>
                     <td><?= htmlspecialchars($musica['genero']) ?></td>
-                    <td><a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">Ouvir Música</a></td>
-                    
+                    <td>
+                        <a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">
+                            <img src="../../public/Css/images.png" alt="Ouvir Música" width="20" height="20">
+                        </a>
+                    </td>
+
                     <td>
                         <li>Média: <?= htmlspecialchars($musica['media_avaliacao']) ?></li>
-                        
+
                     </td>
                 </tr>
             <?php endforeach; ?>
