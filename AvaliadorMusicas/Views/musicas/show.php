@@ -8,7 +8,9 @@
 
 <?php if ($musica['url_musica']): ?> 
 
-    <a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">Ouvir Música</a> 
+    <a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">
+        <img src="#" alt="Ouvir Música" width="20" height="20">
+    </a>
 
 <?php endif; ?> 
 
