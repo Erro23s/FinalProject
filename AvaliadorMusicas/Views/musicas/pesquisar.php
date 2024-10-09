@@ -45,9 +45,9 @@
 
 <h1>Home</h1>
 
-<form action="../../index.php?action=pesquisar" method="POST">
+<form action="../../index.php?action=pesquisar">
     <input type="text" placeholder="Pesquisar musica" name="pesquisar">
-    <input type="submit">
+    <input type="submit" type="hidden">
 </form>
 
 <table>

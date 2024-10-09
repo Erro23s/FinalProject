@@ -16,6 +16,7 @@ class MusicaController {
             $artista = $_POST['artista'];
             $genero = $_POST['genero'];
             $url_musica = $_POST['url_musica'];
+           
             
             
 
@@ -30,6 +31,22 @@ class MusicaController {
 
     public function ListarMusicas() {
         return $this->musicamodel->BuscarMusica();
+    }
+
+    public function PesquisarMusica(){
+        
+            if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                $pesquisar = $_POST['pesquisar'];
+               
+    
+                if ($this->musicamodel->PesquisarMusica($pesquisar)) {
+                    header("location: ../index.php?action=pesquisar");
+            
+                } else {
+                    echo "Erro ao pesquisar o usuário!";
+                }
+            }
+        
     }
     
     
