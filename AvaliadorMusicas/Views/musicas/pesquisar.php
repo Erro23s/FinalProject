@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
     <link rel="stylesheet" type="text/css" href="../../public/Css/listarMusica.css" media="screen" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -41,21 +40,14 @@
             cursor: pointer;
         }
     </style>
-
-<link rel="stylesheet" type="text/css" href="../../public/Css/listarMusica.css" media="screen" />
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Música</title>
-   
-
 </head>
 <body>
 
 <h1>Home</h1>
 
-<form action="../../index.php?action=pesquisar" method="POST">
+<form action="../../index.php?action=pesquisar">
     <input type="text" placeholder="Pesquisar musica" name="pesquisar">
-    <input type="submit">
+    <input type="submit" type="hidden">
 </form>
 
 <table>
@@ -75,7 +67,6 @@
                     <td><?= htmlspecialchars($musica['titulo']) ?></td>
                     <td><?= htmlspecialchars($musica['artista']) ?></td>
                     <td><?= htmlspecialchars($musica['genero']) ?></td>
-
                     
                    
                     <td>
@@ -83,11 +74,6 @@
                             <img src="../../public/Css/images.png" alt="Ouvir Música" width="30" height="30">
                         </a>
                     </td>
-
-                    <td><a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">
-                        <img src="../../public/Css/images.png" alt="Ouvir Música" width="20" height="20">
-                    </a></td>
-
                     
                     <td>
                         <li>Média: <?= htmlspecialchars($musica['media_avaliacao']) ?></li>

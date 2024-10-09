@@ -13,6 +13,7 @@ if (isset($_GET['action'])) {
         $controller->createUser();
 
     } elseif ($_GET['action'] == 'validou') {
+        $controllermusica -> avaliarMusica();
         $listarmusica = $controllermusica->ListarMusicas();
         include __DIR__ . '../../Views/musicas/listarMusica.php';
     }
@@ -33,7 +34,11 @@ if (isset($_GET['action'])) {
     }elseif($_GET['action'] == 'avaliar') {
         $controllermusica -> avaliarMusica();
         $listarmusica = $controllermusica->ListarMusicas();
-        include __DIR__ . '../../Views/musicas/listarMusica.php';
-}}   else {
+       header("location: ../../index.php?action=validou ");
+    }elseif($_GET['action'] == 'pesquisar') {
+        $controllermusica -> PesquisarMusica();
+        include __DIR__ . '../../Views/musicas/pesquisar.php';
+
+}}  else {
     include __DIR__ . '../../Views/musicas/cadastro.php';
      }

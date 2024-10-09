@@ -22,6 +22,11 @@ class MusicaModel {
         $result = $this->conn->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    public function PesquisarMusica($pesquisar) {
+        $stmt = $this->conn->prepare("SELECT * from musicas WHERE %$pesquisar% ");
+        return $stmt->execute();
+    }
+
 
     public function adicionarAvaliacao($musicaId, $avaliacao) {
         $stmt = $this->conn->prepare("INSERT INTO avaliacoes (musica_id, avaliacao) VALUES (?, ?)");
