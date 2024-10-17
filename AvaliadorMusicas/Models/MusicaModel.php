@@ -23,8 +23,12 @@ class MusicaModel {
         return $result->fetch_all(MYSQLI_ASSOC);
     }
     public function PesquisarMusica($pesquisar) {
-        $stmt = $this->conn->prepare("SELECT * from musicas WHERE %$pesquisar% ");
-        return $stmt->execute();
+        $stmt = $this->conn->prepare("SELECT * FROM musicas WHERE titulo LIKE ?");
+        $pesquisar = "%$pesquisar%";
+        $stmt->bind_param("s", $pesquisar);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_all(MYSQLI_ASSOC);
     }
 
 
@@ -33,7 +37,7 @@ class MusicaModel {
         $stmt->bind_param("ii", $musicaId, $avaliacao);
         $stmt->execute();
 
-        // Recalcular a média de avaliações
+    
         $stmt = $this->conn->prepare("SELECT AVG(avaliacao) as media FROM avaliacoes WHERE musica_id = ?");
         $stmt->bind_param("i", $musicaId);
         $stmt->execute();
@@ -41,12 +45,13 @@ class MusicaModel {
         $row = $result->fetch_assoc();
         $mediaAvaliacao = $row['media'];
 
-        // Atualizar a média na tabela de músicas
+      
         $stmt = $this->conn->prepare("UPDATE musicas SET media_avaliacao = ? WHERE id = ?");
         $stmt->bind_param("di", $mediaAvaliacao, $musicaId);
         return $stmt->execute();
 
     }
-
     
 }
+
+
