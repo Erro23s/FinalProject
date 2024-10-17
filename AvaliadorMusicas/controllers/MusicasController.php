@@ -37,14 +37,7 @@ class MusicaController {
         
             if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 $pesquisar = $_POST['pesquisar'];
-               
-    
-                if ($this->musicamodel->PesquisarMusica($pesquisar)) {
-                    header("location: ../index.php?action=pesquisar");
-            
-                } else {
-                    echo "Erro ao pesquisar o usuário!";
-                }
+                    return $this->musicamodel->PesquisarMusica($pesquisar); 
             }
         
     }
@@ -54,8 +47,16 @@ class MusicaController {
         if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['musica_id'], $_POST['avaliacao'])) {
             $musicaId = (int) $_POST['musica_id'];
             $avaliacao = (int) $_POST['avaliacao'];
-
+            $pesquisarTermo = isset($_POST['pesquisar']) ? $_POST['pesquisar'] : '';
+    
             if ($avaliacao >= 1 && $avaliacao <= 5) {
                 $this->musicamodel->adicionarAvaliacao($musicaId, $avaliacao);
+    
+                // Redirecionar de volta para a página de pesquisa, mantendo o termo
+                header("Location: ../../index.php?action=pesquisar&pesquisar=" . urlencode($pesquisarTermo));
+                exit();
             }
-}}}
+        }
+    }
+  
+    }
