@@ -51,6 +51,18 @@ class MusicaModel {
         return $stmt->execute();
 
     }
+    public function BuscarMusicaOrdenadaPorNota() {
+        $query = "SELECT * FROM musicas ORDER BY media_avaliacao DESC";
+        $result = $this->conn->query($query);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
+
+    // Buscar músicas ordenadas pela menor nota de avaliação
+    public function BuscarMusicaOrdenadaPorNotaCrescente() {
+        $query = "SELECT * FROM musicas ORDER BY media_avaliacao ASC";
+        $result = $this->conn->query($query);
+        return $result->fetch_all(MYSQLI_ASSOC);
+    }
     
 }
 
