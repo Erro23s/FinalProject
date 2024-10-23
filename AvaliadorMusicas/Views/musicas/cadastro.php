@@ -5,9 +5,12 @@
     <meta charset="UTF-8">
     <title>Formulário de Usuário</title>
     <style>
+        
     </style>
+    
 </head>
 <body>
+    
     <div class="background-overlay"></div> <!-- Fundo adicional atrás do formulário -->
     
     <div class="login-container">

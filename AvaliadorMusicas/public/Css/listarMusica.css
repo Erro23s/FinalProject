@@ -86,3 +86,8 @@ a:hover {
     font-style: italic;
     color: #888;
 
+}
+
+.carousel-inner {
+    height: 15cm;
+}
