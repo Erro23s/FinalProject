@@ -18,7 +18,7 @@ class ValidarController {
                 header("location: ../index.php?action=validou");
         
             } else {
-                echo "Erro ao inserir o usuário!";
+                echo "Erro ao inserir o usuário no sistema";
             }
         }
     }

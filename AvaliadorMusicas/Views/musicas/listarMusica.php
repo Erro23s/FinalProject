@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
     <script>
-        // Carrega a API do YouTube apenas se ela ainda não estiver carregada
+
         if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
             var tag = document.createElement('script');
             tag.src = "https://www.youtube.com/iframe_api";
@@ -21,7 +21,6 @@
 
         function initializeYouTubePlayer() {
             if (typeof YT !== 'undefined' && typeof YT.Player !== 'undefined') {
-                // Inicializa o player do YouTube
                 player = new YT.Player('player', {
                     height: '390',
                     width: '640',
@@ -71,7 +70,7 @@
         }
 
         function onPlayerReady(event) {
-            // O que fazer quando o player estiver pronto (se necessário)
+          
         }
 
         function onPlayerStateChange(event) {
@@ -80,43 +79,13 @@
             }
         }
 
-        // Recarrega o player sempre que a página é carregada
+     
         document.addEventListener('DOMContentLoaded', function () {
             initializeYouTubePlayer();
         });
     </script>
 
     <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            padding: 20px;
-            border-radius: 4px;
-            max-width: 700px;
-            width: 90%;
-            position: relative;
-        }
-
-        .close {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            font-size: 24px;
-            cursor: pointer;
-        }
     </style>
 
 <link rel="stylesheet" type="text/css" href="../../public/Css/listarMusica.css" media="screen" />
@@ -160,11 +129,15 @@
 
 
     <Header>
-            <button action="../../index.php?action=validou" method="post">Home</button>
-            <button action="../../index.php?action=perfil" method="post">Usuario</button>
 
+    <form action="../../index.php?action=validou" method="POST">
+    <button type="submit">Home</button>
+    </form>
+    <form action="../../index.php?action=perfil" method="POST">
+    <button type="submit">Perfil</button>
+    </form>
+        
     </Header>
-
 <h1>Home</h1>
 
 <form action="../../index.php?action=pesquisar" method="POST">
@@ -172,11 +145,16 @@
     <button type="submit" value="Pesquisar">Pesquisar</button>
 </form>
 
-<form method="GET" action="../../index.php?action=pesquisar">
-    <input type="hidden" name="action" value="listar">
-    <button type="submit" name="ordem" value="DESC">Mais Bem Avaliadas</button>
-    <button type="submit" name="ordem" value="ASC">Menos Bem Avaliadas</button>
-</form>
+<div>
+
+    <div style="color: aliceblue;">
+    <p>Ordenar por:</p>
+        <a href="index.php?action=ordenarmaior">Maior Nota</a><a href="index.php?action=ordenarmenor">Menor Nota</a>
+       
+    </div>
+
+
+
 <table>
     <thead>
         <tr>
@@ -225,7 +203,6 @@
     </tbody>
 </table>
 
-<!-- Modal de vídeo -->
 <div id="modal" class="modal">
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>

@@ -51,12 +51,18 @@ class MusicaController {
     
             if ($avaliacao >= 1 && $avaliacao <= 5) {
                 $this->musicamodel->adicionarAvaliacao($musicaId, $avaliacao);
-    
-                // Redirecionar de volta para a página de pesquisa, mantendo o termo
-                header("Location: ../../index.php?action=pesquisar&pesquisar=" . urlencode($pesquisarTermo));
+                header("Location: ../../index.php?action=" . urlencode($pesquisarTermo));
                 exit();
             }
         }
+    }
+
+    public function ListarMusicasPorNota() {
+        return $this->musicamodel->BuscarMusicaOrdenadaPorNota();
+    }
+
+    public function ListarMusicasPorNotaCrescente() {
+        return $this->musicamodel->BuscarMusicaOrdenadaPorNotaCrescente();
     }
   
     }

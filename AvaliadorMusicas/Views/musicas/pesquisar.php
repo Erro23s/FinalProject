@@ -119,7 +119,7 @@
 </head>
 <body>
     <Header>
-            <form action="../../index.php?action=pesquisar" method="POST">
+            <form action="../../index.php?action=validou" method="POST">
            <button action="submit">Home</button>
             </form>
             <form action="../../index.php?action=usuario" method="POST">
