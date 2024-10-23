@@ -6,7 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Música</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
     <script>
 
         if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
@@ -95,6 +96,38 @@
 
 </head>
 <body>
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner" >
+    <div class="carousel-item active">
+        <a href="javascript:void(0);" onclick="loadVideo('https://www.youtube.com/watch?v=aq-DH4iwviE')">
+            <img src="../../public/Img/hq720.jpg" class="d-block w-100" alt="...">
+        </a>
+    </div>
+    <div class="carousel-item">
+        <a href="javascript:void(0);" onclick="loadVideo('https://www.youtube.com/watch?v=-x2cE--r3L8')">
+            <img src="../../public/Img/mariaMatue.jpg" class="d-block w-100" alt="...">
+        </a>
+    </div>
+    <div class="carousel-item">
+        <a href="javascript:void(0);" onclick="loadVideo('https://www.youtube.com/watch?v=T-IRXE5UmJM')">
+            <img src="../../public/Img/pretinhoUva.jpg" class="d-block w-100" alt="...">
+        </a>
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
     <Header>
 
     <form action="../../index.php?action=validou" method="POST">
@@ -109,7 +142,7 @@
 
 <form action="../../index.php?action=pesquisar" method="POST">
     <input type="text" placeholder="Pesquisar música" name="pesquisar">
-    <input type="submit" value="Pesquisar">
+    <button type="submit" value="Pesquisar">Pesquisar</button>
 </form>
 
 <div>
@@ -142,16 +175,9 @@
 
                     <td>
                         <a href="javascript:void(0);" onclick="loadVideo('<?= htmlspecialchars($musica['url_musica']) ?>')">
-                            <img src="../../public/Css/images.png" alt="Ouvir Música" width="30" height="30">
+                            <img src="../../public/Img/images.png" alt="Ouvir Música" width="30" height="30">
                         </a>
                     </td>
-
-
-                    <td><a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">
-                        <img src="../../public/Css/images.png" alt="Ouvir Música" width="20" height="20">
-                    </a></td>
-
-                    
 
                     <td>
                         <li>Média: <?= htmlspecialchars($musica['media_avaliacao']) ?></li>

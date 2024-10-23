@@ -87,6 +87,12 @@ a:hover {
     color: #888;
 
 }
+
+
+.carousel-inner {
+    height: 15cm;
+}
+
 .modal {
     display: none;
     position: fixed;
@@ -117,4 +123,5 @@ a:hover {
     font-size: 24px;
     cursor: pointer;
 }
+
 
