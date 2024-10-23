@@ -85,6 +85,7 @@ a:hover {
     text-align: center;
     font-style: italic;
     color: #888;
+
 }
 .modal {
     display: none;
@@ -116,3 +117,4 @@ a:hover {
     font-size: 24px;
     cursor: pointer;
 }
+
