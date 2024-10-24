@@ -124,4 +124,16 @@ a:hover {
     cursor: pointer;
 }
 
+.container-fluid {
+    background-color: #4CAF50;
+}
+
+.d-flex {
+    background-color: #4CAF50;
+}
+
+.navbar-brand {
+    font-family: Arial, sans-serif;
+}
+
 
