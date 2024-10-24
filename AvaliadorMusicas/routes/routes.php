@@ -43,7 +43,7 @@ if (isset($_GET['action'])) {
         $listarmusica = $controllermusica->ListarMusicasPorNotaCrescente();
         $controllermusica->avaliarMusica();
         include __DIR__ . '../../Views/musicas/listarmusica.php';
-    } else {
+    } 
+}else {
         include __DIR__ . '../../Views/musicas/cadastro.php';
     }
-}

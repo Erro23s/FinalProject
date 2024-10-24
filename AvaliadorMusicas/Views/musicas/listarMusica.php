@@ -130,26 +130,32 @@
 
     <Header>
 
-    <form action="../../index.php?action=validou" method="POST">
-    <button type="submit">Home</button>
-    </form>
-    <form action="../../index.php?action=perfil" method="POST">
-    <button type="submit">Perfil</button>
-    </form>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Perfil</a>
+        </li>
+    
         
-    </Header>
-<h1>Home</h1>
-
-<form action="../../index.php?action=pesquisar" method="POST">
-    <input type="text" placeholder="Pesquisar música" name="pesquisar">
-    <button type="submit" value="Pesquisar">Pesquisar</button>
-</form>
-
+      </ul>
+      <form class="d-flex" role="search">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>
 <div>
 
-    <div style="color: aliceblue;">
+    <div style="color: aliceblue; font-family: Arial, sans-serif;">
     <p>Ordenar por:</p>
-        <a href="index.php?action=ordenarmaior">Maior Nota</a><a href="index.php?action=ordenarmenor">Menor Nota</a>
+        <a href="index.php?action=ordenarmaior" class="btn btn-outline-success">Maior Nota</a><a href="index.php?action=ordenarmenor" class="btn btn-outline-success">Menor Nota</a>
        
     </div>
 
