@@ -43,7 +43,9 @@ if (isset($_GET['action'])) {
         $listarmusica = $controllermusica->ListarMusicasPorNotaCrescente();
         $controllermusica->avaliarMusica();
         include __DIR__ . '../../Views/musicas/listarmusica.php';
-    } 
-}else {
+    } elseif ($_GET['action'] == 'perfil') {
+        include __DIR__ . '../../Views/musicas/show.php';
+    }
+} else {
         include __DIR__ . '../../Views/musicas/cadastro.php';
     }
