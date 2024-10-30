@@ -18,4 +18,9 @@ class UserModel {
         $result = $this->conn->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
-}
+    public function EditarUsuarioModel($id,$name, $email) {
+        $query = "UPDATE users SET name = ?, email = ? WHERE id = ?";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bind_param("ssi", $name, $email, $id);
+        return $stmt->execute();
+}}

@@ -27,4 +27,17 @@ class UserController {
     public function listUsers() {
         return $this->userModel->buscarUsers();
     }
-}
+
+    public function EditarUsuarioControll() {
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            $id = $_POST['id'];
+            $name = $_POST['name'];
+            $email = $_POST['email'];
+
+            if ($this->userModel->EditarUsuarioModel($id, $name, $email)) {
+                echo "Usuário atualizado com sucesso!";
+            } else {
+                echo "Erro ao atualizar o usuário!";
+            }
+        }
+}}

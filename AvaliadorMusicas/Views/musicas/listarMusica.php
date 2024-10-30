@@ -144,8 +144,8 @@
     
         
       </ul>
-      <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <form class="d-flex" role="search" action="../../index.php?action=pesquisar" method="post">
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="pesquisar">
         <button class="btn btn-outline-success" type="submit">Search</button>
       </form>
     </div>
@@ -187,7 +187,7 @@
 
                     <td>
                         <li>Média: <?= htmlspecialchars($musica['media_avaliacao']) ?></li>
-                        <form action="../../index.php?action=validou" method="POST">
+                        <form action="../../index.php?action=avaliar" method="POST">
                             <input type="hidden" name="musica_id" value="<?= htmlspecialchars($musica['id']) ?>">
                             <select name="avaliacao">
                                 <option value="1">1</option>
