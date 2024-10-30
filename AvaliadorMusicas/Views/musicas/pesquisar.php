@@ -154,7 +154,7 @@
                     <td><?= htmlspecialchars($musica['genero']) ?></td>
                     <td>
                         <a href="javascript:void(0);" onclick="loadVideo('<?= htmlspecialchars($musica['url_musica']) ?>')">
-                            <img src="../../public/Css/images.png" alt="Ouvir Música" width="30" height="30">
+                            <img src="../../public/img/images.png" alt="Ouvir Música" width="30" height="30">
                         </a>
                     </td>
                     <td>

@@ -51,7 +51,7 @@ class MusicaController {
     
             if ($avaliacao >= 1 && $avaliacao <= 5) {
                 $this->musicamodel->adicionarAvaliacao($musicaId, $avaliacao);
-                header("Location: ../../index.php?action=" . urlencode($pesquisarTermo));
+                header("Location: ../../index.php?action=validou" . urlencode($pesquisarTermo));
                 exit();
             }
         }
