@@ -25,12 +25,17 @@
     background-color: #fefefe;
     padding: 20px;
     border-radius: 4px;
-    max-width: 700px;
-    width: 90%;
+    width: 100%;
     position: relative;
 }
 
-
+.close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
 
 .container-fluid {
     background-color: #4CAF50;
@@ -66,7 +71,7 @@
   
   body {
     font-family: 'Rubik', Arial, Helvetica, sans-serif;
-    background: #0c0b0b;
+    background-color: #0c0b0b;
     color: #b7b7b7;
   }
   
@@ -76,11 +81,13 @@
     height: 100vh;
     justify-content: center;
     align-items: center;
+    background: #0f0e0e;
+    width: 100%;
   }
   
   .wrapper {
     background: #0f0e0e;
-    width: 1200px;
+    width: 1800px;
     padding: 300px;
   }
   
@@ -88,7 +95,7 @@
   .user {
     display: flex;
     justify-content: space-between;
-    margin: 0 15px;
+    
   }
   
   .info::before,
@@ -158,7 +165,9 @@
     padding: 25px;
     border-radius: 5px;
   }
-  
+  .fundo {
+    background-color: #0f0e0e;
+  }
  
   @media only screen and (max-width: 690px) {
     .wrapper {
@@ -208,4 +217,6 @@
       border-radius: 5px;
     }
   }
+
+  
 
