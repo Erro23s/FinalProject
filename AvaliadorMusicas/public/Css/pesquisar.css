@@ -1,9 +1,10 @@
-body {
+.body2 {
     font-family: Arial, sans-serif;
     background-color: #313131;
     margin: 0;
     padding: 20px;
     color: #333;
+    min-height: 100vh;
 }
 
 h1 {
@@ -89,9 +90,6 @@ a:hover {
 }
 
 
-.carousel-inner {
-    height: 15cm;
-}
 
 .modal {
     display: none;
@@ -124,8 +122,15 @@ a:hover {
     cursor: pointer;
 }
 
+.container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
 .container-fluid {
     background-color: #4CAF50;
+    
 }
 
 .d-flex {

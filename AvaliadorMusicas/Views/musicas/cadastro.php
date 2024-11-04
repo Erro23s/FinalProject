@@ -28,9 +28,9 @@
         </form>
         <br> 
 
-        <label for="a">Já tem conta?</label>
         
-        <a class="link" href="login?action=login">Clique aqui</a>
+        
+        <a class="link" href="login?action=login">Já tem uma conta?</a>
         
     </div>
         </div>

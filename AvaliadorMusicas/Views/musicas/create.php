@@ -60,7 +60,7 @@
                     <td><?= htmlspecialchars($musica['genero']) ?></td>
                     <td>
                         <a href="<?= htmlspecialchars($musica['url_musica']) ?>" target="_blank">
-                            <img src="../../public/Css/images.png" alt="Ouvir Música" width="20" height="20">
+                            <img src="../../public/Img/images.png" alt="Ouvir Música" width="20" height="20">
                         </a>
                     </td>
 
