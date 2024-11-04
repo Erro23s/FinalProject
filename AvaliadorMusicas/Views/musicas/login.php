@@ -28,10 +28,9 @@
         </form>
         <br>
 
-        <label for="a">Não tem conta?</label>
         
 
-        <a class="link"href="login?action=cadrastro">Clique aqui</a>
+        <a class="link"href="login?action=cadrastro">Não tem uma conta?</a>
     </div>
     
 

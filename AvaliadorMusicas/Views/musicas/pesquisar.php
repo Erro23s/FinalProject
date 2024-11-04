@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <link rel="stylesheet" type="text/css" href="../../public/Css/listarMusica.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="../../public/Css/pesquisar.css" media="screen" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Música</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script>
         // Carrega a API do YouTube apenas se ela ainda não estiver carregada
         if (typeof YT === 'undefined' || typeof YT.Player === 'undefined') {
@@ -84,51 +84,30 @@
         });
     </script>
 
-    <style>
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0,0,0,0.5);
-            justify-content: center;
-            align-items: center;
-        }
-
-        .modal-content {
-            background-color: #fefefe;
-            padding: 20px;
-            border-radius: 4px;
-            max-width: 700px;
-            width: 90%;
-            position: relative;
-        }
-
-        .close {
-            position: absolute;
-            right: 10px;
-            top: 10px;
-            font-size: 24px;
-            cursor: pointer;
-        }
-    </style>
+    
 </head>
-<body>
-    <Header>
-            <form action="../../index.php?action=validou" method="POST">
-           <button action="submit">Home</button>
-            </form>
-            <form action="../../index.php?action=usuario" method="POST">
-           <button action="submit">Usuario</button>
-            </form>
+<body class="body2">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
+<Header>
+
+<nav class="navbar navbar-expand-lg ">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Home</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="../index.php?action=perfil" >Perfil</a>
+        </li>
+    
+        
+      </ul>
+     
     </Header>
 
-<h1>Home</h1>
 
 <form action="../../index.php?action=pesquisar" method="POST">
     <input type="text" placeholder="Pesquisar música" name="pesquisar">
@@ -189,6 +168,5 @@
         <div id="player"></div>
     </div>
 </div>
-
 </body>
 </html>
