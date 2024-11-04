@@ -16,22 +16,13 @@
 
   <Header>
 
-<nav class="navbar navbar-expand-lg bg-body-tertiary">
+<nav class="navbar navbar-expand-lg">
 <div class="container-fluid">
-<a class="navbar-brand" href="#">Home</a>
+<a class="navbar-brand" href="../index.php?action=validou">Home</a>
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
-<div class="collapse navbar-collapse" id="navbarSupportedContent">
-  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-    <li class="nav-item">
-      <a class="nav-link active" aria-current="page" href="../index.php?action=perfil" >Perfil</a>
-    </li>
 
-    
-  </ul>
-  
-</div>
 </div>
 </nav>
 <div class="fundo">
@@ -43,18 +34,18 @@
         <div class="user">
           <div class="info">
             <div class="icon"></div>
-            <h1>Nome</h1>
-            <p>email</p>
+            <h1><?php echo htmlspecialchars($userData['name']); ?></h1>
+            <p><?php echo htmlspecialchars($userData['email']); ?></p>
           </div>
           <div class="button">
             <i data-feather="edit"></i>
-            <p type="button">Editar</p>
+            <p type="button">Editar (Em breve) </p>
           </div>
         </div>
         <div class="stats">
           <div class="projects">
-            <p>Avaliações</p>
-            <h1>#</h1>
+            <p>Avaliações </p>
+            <h1>Em breve</h1>
           </div>
         </div>
       </div>
