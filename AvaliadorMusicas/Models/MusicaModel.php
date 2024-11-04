@@ -36,20 +36,15 @@ class MusicaModel {
         $stmt = $this->conn->prepare("INSERT INTO avaliacoes (musica_id, avaliacao) VALUES (?, ?)");
         $stmt->bind_param("ii", $musicaId, $avaliacao);
         $stmt->execute();
-
-    
         $stmt = $this->conn->prepare("SELECT AVG(avaliacao) as media FROM avaliacoes WHERE musica_id = ?");
         $stmt->bind_param("i", $musicaId);
         $stmt->execute();
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
         $mediaAvaliacao = $row['media'];
-
-      
         $stmt = $this->conn->prepare("UPDATE musicas SET media_avaliacao = ? WHERE id = ?");
         $stmt->bind_param("di", $mediaAvaliacao, $musicaId);
         return $stmt->execute();
-
     }
     public function BuscarMusicaOrdenadaPorNota() {
         $query = "SELECT * FROM musicas ORDER BY media_avaliacao DESC";
@@ -61,6 +56,7 @@ class MusicaModel {
         $result = $this->conn->query($query);
         return $result->fetch_all(MYSQLI_ASSOC);
     }
+    
     
 }
 

@@ -7,11 +7,9 @@ class ValidarModel {
     }
     public function buscarUsuario($name, $email) {
         $stmt = $this->conn->prepare("SELECT * FROM users WHERE name = ? AND email = ?");
-
         if (!$stmt) {
             die('Erro na consulta SQL: ' . $this->conn->error);
         }
-
         $stmt->bind_param("ss", $name, $email); 
         $stmt->execute();
         $result = $stmt->get_result();
@@ -27,5 +25,12 @@ class ValidarModel {
             return $user;  
         }
         return false; 
+    }
+    public function buscarUsuario2($name, $email) {
+        $stmt = $this->conn->prepare("SELECT * FROM users WHERE name = ? AND email = ?");
+        $stmt->bind_param("ss", $name, $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        return $result->fetch_assoc(); // Retorna um único usuário como array associativo
     }
 }

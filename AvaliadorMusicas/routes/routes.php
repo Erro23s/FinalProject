@@ -24,7 +24,7 @@ if (isset($_GET['action'])) {
         $users = $validarcontroller->ValidarUsuario();
     } elseif ($_GET['action'] == 'admin') {
         $listarmusica = $controllermusica->ListarMusicas();
-        $users = $controller->listUsers();
+        $users = $controller->listarUsers();
         include __DIR__ . '../../Views/musicas/create.php';
     } elseif ($_GET['action'] == 'avaliar') {
         $controllermusica->avaliarMusica();
@@ -36,7 +36,7 @@ if (isset($_GET['action'])) {
         include __DIR__ . '../../Views/musicas/pesquisar.php';
     } elseif ($_GET['action'] == 'ordenarmaior') {
         $pesquisar = $controllermusica->PesquisarMusica();
-        $controllermusica->avaliarMusica();
+        $controllermusica->avaliarMusica(); 
         $listarmusica = $controllermusica->ListarMusicasPorNota();
         include __DIR__ . '../../Views/musicas/listarmusica.php';
     } elseif ($_GET['action'] == 'ordenarmenor') {
@@ -45,11 +45,11 @@ if (isset($_GET['action'])) {
         $listarmusica = $controllermusica->ListarMusicasPorNotaCrescente();
         include __DIR__ . '../../Views/musicas/listarmusica.php';
     } elseif ($_GET['action'] == 'perfil') {
+        $userData = $validarcontroller->exibirUsers();
         include __DIR__ . '../../Views/musicas/show.php';
-    }  elseif ($_GET['action'] == 'editarperfil') {
-        $controller -> EditarUsuarioControll();
-        include __DIR__ . '../../Views/musicas/editarperfil.php';
-    } 
-} else {
-        include __DIR__ . '../../Views/musicas/cadastro.php';
     }
+       
+    
+} else {
+    include __DIR__ . '../../Views/musicas/cadastro.php';
+}
