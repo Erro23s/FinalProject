@@ -101,23 +101,25 @@
         <h1>SoundRating</h1>
         <img src="../../public/Img/DALL·E-2024-11-04-21_32_37-A-modern-and-minimalistic-logo-for-a-mobile-app-called-_SoundRating__-fea.png" height="70px" width="80px">
     </div>
-<div id="carouselExample" class="carousel slide">
-  <div class="carousel-inner" >
+    <div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
     <div class="carousel-item active">
-        <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/a3FDFSMz5JQ?si=Nd8Gq7nyiUrtmSZz)">
-            <img src="../../public/Img/maxresdefault.jpg" class="d-block w-100" alt="...">
-        </a>
+      <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/a3FDFSMz5JQ?si=Nd8Gq7nyiUrtmSZz')">
+        <img src="../../public/Img/maxresdefault.jpg" class="d-block w-100" alt="...">
+      </a>
     </div>
     <div class="carousel-item">
-        <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/aq-DH4iwviE?si=t97grnraFgUAzJV-')">
-            <img src="../../public/Img/mariaMatue.jpg" class="d-block w-100" alt="...">
-        </a>
+      <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/aq-DH4iwviE?si=t97grnraFgUAzJV-')">
+        <img src="../../public/Img/mariaMatue.jpg" class="d-block w-100" alt="...">
+      </a>
     </div>
     <div class="carousel-item">
-        <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/1w7OgIMMRc4?si=f4Jdjsq0hygs_-vr')">
-            <img src="../../public/Img/guns.jpg" class="d-block w-100" alt="...">
-        </a>
+      <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/1w7OgIMMRc4?si=f4Jdjsq0hygs_-vr')">
+        <img src="../../public/Img/guns.jpg" class="d-block w-100" alt="...">
+      </a>
     </div>
+  </div>
+</div>
 
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
