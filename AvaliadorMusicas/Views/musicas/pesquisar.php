@@ -87,6 +87,10 @@
     
 </head>
 <body class="body2">
+<div class="imglado">
+        <h1>SoundRating</h1>
+        <img src="../../public/Img/DALL·E-2024-11-04-21_32_37-A-modern-and-minimalistic-logo-for-a-mobile-app-called-_SoundRating__-fea.png" height="70px" width="80px">
+    </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 <Header>

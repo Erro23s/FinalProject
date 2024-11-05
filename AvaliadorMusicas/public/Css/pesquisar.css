@@ -141,5 +141,15 @@ a:hover {
     font-family: Arial, sans-serif;
 }
 
+.imglado {
+    display: flex;
+    flex-direction:row;
+    color: #4CAF50;
+  }
+
+  .Tamanho {
+    height: 1px;
+    width: 1px;
+  }
 
 

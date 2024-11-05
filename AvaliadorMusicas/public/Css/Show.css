@@ -88,7 +88,7 @@
   .wrapper {
     background: #0f0e0e;
     width: 1800px;
-    padding: 300px;
+    
   }
   
   
@@ -168,6 +168,18 @@
   .fundo {
     background-color: #0f0e0e;
   }
+
+  .imglado {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  .Tamanho {
+    height: 50px;
+    width: 50px;
+  }
+
+
  
   @media only screen and (max-width: 690px) {
     .wrapper {
