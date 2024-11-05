@@ -96,6 +96,11 @@
 
 </head>
 <body>
+
+    <div class="imglado">
+        <h1>SoundRating</h1>
+        <img src="../../public/Img/DALL·E-2024-11-04-21_32_37-A-modern-and-minimalistic-logo-for-a-mobile-app-called-_SoundRating__-fea.png" height="70px" width="80px">
+    </div>
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner" >
     <div class="carousel-item active">
