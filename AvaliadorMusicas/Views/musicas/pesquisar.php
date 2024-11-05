@@ -115,7 +115,7 @@
 
 <form action="../../index.php?action=pesquisar" method="POST">
     <input type="text" placeholder="Pesquisar música" name="pesquisar">
-    <input type="submit" value="Pesquisar">
+    <button type="submit">Pesquisar</button>
 </form>
 
 <table>
