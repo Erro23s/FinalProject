@@ -104,18 +104,18 @@
 <div id="carouselExample" class="carousel slide">
   <div class="carousel-inner" >
     <div class="carousel-item active">
-        <a href="javascript:void(0);" onclick="loadVideo('https://www.youtube.com/watch?v=aq-DH4iwviE')">
-            <img src="../../public/Img/hq720.jpg" class="d-block w-100" alt="...">
+        <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/a3FDFSMz5JQ?si=Nd8Gq7nyiUrtmSZz)">
+            <img src="../../public/Img/maxresdefault.jpg" class="d-block w-100" alt="...">
         </a>
     </div>
     <div class="carousel-item">
-        <a href="javascript:void(0);" onclick="loadVideo('https://www.youtube.com/watch?v=-x2cE--r3L8')">
+        <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/aq-DH4iwviE?si=t97grnraFgUAzJV-')">
             <img src="../../public/Img/mariaMatue.jpg" class="d-block w-100" alt="...">
         </a>
     </div>
     <div class="carousel-item">
-        <a href="javascript:void(0);" onclick="loadVideo('https://www.youtube.com/watch?v=T-IRXE5UmJM')">
-            <img src="../../public/Img/pretinhoUva.jpg" class="d-block w-100" alt="...">
+        <a href="javascript:void(0);" onclick="loadVideo('https://youtu.be/1w7OgIMMRc4?si=f4Jdjsq0hygs_-vr')">
+            <img src="../../public/Img/guns.jpg" class="d-block w-100" alt="...">
         </a>
     </div>
 

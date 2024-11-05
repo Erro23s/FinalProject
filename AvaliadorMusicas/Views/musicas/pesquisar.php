@@ -97,7 +97,7 @@
 
 <nav class="navbar navbar-expand-lg ">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Home</a>
+    <a class="navbar-brand" href="../index.php?action=validou">Home</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -142,17 +142,16 @@
                     </td>
                     <td>
                         <li>Média: <?= htmlspecialchars($musica['media_avaliacao']) ?></li>
-                        <form action="../../index.php?action=validou" method="POST">
-                                <input type="hidden" name="musica_id" value="<?= htmlspecialchars($musica['id']) ?>">
-                                <input type="hidden" name="pesquisar" value="<?= htmlspecialchars($pesquisarTermo) ?>"> <!-- Adicione o termo da pesquisa -->
-                                <select name="avaliacao">
-                                    <option value="1">1</option>
-                                    <option value="2">2</option>
-                                    <option value="3">3</option>
-                                    <option value="4">4</option>
-                                    <option value="5">5</option>
-                                </select>
-                                <button type="submit">Avaliar</button>
+                        <form action="../../index.php?action=avaliar" method="POST">
+                            <input type="hidden" name="musica_id" value="<?= htmlspecialchars($musica['id']) ?>">
+                            <select name="avaliacao">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                            </select>
+                            <button type="submit">Avaliar</button>
                             </form>
                     </td>
                 </tr>
