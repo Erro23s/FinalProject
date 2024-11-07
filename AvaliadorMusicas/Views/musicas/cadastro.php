@@ -11,7 +11,7 @@
 </head>
 <body>
     
-    <div class="background-overlay"></div> <!-- Fundo adicional atrás do formulário -->
+    <div class="background-overlay"></div> 
     
     <div class="login-container">
         
